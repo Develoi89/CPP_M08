@@ -3,27 +3,11 @@
 #include <iostream>
 #include <stdexcept>
 #include <vector>
-
-vnf::vnf(): std::runtime_error("vlaor not found."){}
+#include <algorithm>
 
 template<typename T>
-T easyfind(T& l, int i)
-{
-    for (T iter = l.begin(); iter != l.end(); ++iter)
-    {
-        if(iter == i)
-        {
-            std::cout << iter << std::endl;
-            return iter;
-        }
-    } 
-    throw vnf();
-}
+int easyfind(T& l, int i);
 
-class vnf: public std::runtime_error
-{
-    public:
-        vnf();
-};
+#include "easyfind.tpp"
 
 #endif
