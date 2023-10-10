@@ -6,6 +6,7 @@
 
 int main(void)
 {
+    std::cout << std::endl;
     {
         std::vector<int> enteros;
         for (size_t i = 0; i < 42; i++)
@@ -35,4 +36,6 @@ int main(void)
             std::cout << e.what() << '\n';
         }
     }
+    std::cout << std::endl;
+    return 0;
 }
