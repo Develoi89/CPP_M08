@@ -23,6 +23,23 @@ class Span
 		};
 		int shortestSpan();
 		int longestSpan();
+		std::vector<int> getNmb();
+
+		template<typename T>
+		void addStack(T &con);
 };
+
+template<typename T>
+void Span::addStack(T &con)
+{
+	if((con.size() + _numbers.size()) <= _max)
+	{
+		typename T::const_iterator it;
+		for (it = con.begin(); it != con.end(); it++)
+			addNumber(*it);
+	}
+	else
+		throw nbFull();
+}
 
 #endif

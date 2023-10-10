@@ -3,8 +3,6 @@ NAME		=	test
 SRC			=	Span.cpp\
 				main.cpp
 
-# TMP			=	Span.tpp
-
 HDS			=	Span.hpp
 
 OBJ			=	$(SRC:.cpp=.o)
@@ -12,7 +10,7 @@ OBJ			=	$(SRC:.cpp=.o)
 CC			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-%.o:	%.cpp %.tpp %.hpp
+%.o:	%.cpp %.hpp
 		$(CC) ${CFLAGS} -o $@ -c $<
 
 $(NAME)		:	$(OBJ) $(HDS)

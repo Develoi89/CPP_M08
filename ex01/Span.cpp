@@ -52,7 +52,6 @@ int Span::shortestSpan()
                         r = tmp;
                 }
         }
-        
     }
     return r;
 }
@@ -76,7 +75,11 @@ int Span::longestSpan()
                         r = tmp;
                 }
         }
-        
     }
     return r;	
+}
+
+std::vector<int> Span::getNmb()
+{
+	return _numbers;
 }
