@@ -21,6 +21,11 @@ class Span
 			public:
 				nbFull();
 		};
+		class nbEmpty: public std::runtime_error
+		{
+			public:
+				nbEmpty();
+		};		
 		int shortestSpan();
 		int longestSpan();
 		std::vector<int> getNmb();

@@ -1,6 +1,7 @@
 #include "Span.hpp"
 
 Span::nbFull::nbFull(): std::runtime_error("Span is full"){}
+Span::nbEmpty::nbEmpty(): std::runtime_error("Span is empty"){}
 
 Span::Span()
 {
@@ -38,6 +39,8 @@ int Span::shortestSpan()
     int r;
     int tmp;
     std::vector<int>::iterator it;
+    if(getNmb().size() == 0)
+        throw nbEmpty();
     for (it = _numbers.begin(); it != _numbers.end(); it++)
     {
         std::vector<int>::iterator itt;
@@ -61,6 +64,8 @@ int Span::longestSpan()
 	    int r;
     int tmp;
     std::vector<int>::iterator it;
+    if(getNmb().size() == 0)
+        throw nbEmpty();
     for (it = _numbers.begin(); it != _numbers.end(); it++)
     {
         std::vector<int>::iterator itt;
