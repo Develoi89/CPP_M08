@@ -1,7 +1,6 @@
 NAME		=	test
 
-SRC			=	MutantStack.cpp\
-				main.cpp
+SRC			=	main.cpp
 
 HDS			=	MutantStack.hpp
 
