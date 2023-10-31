@@ -7,7 +7,6 @@ class MutantStack: public std::stack<T>
 {
     public:
         using typename std::stack<T>::container_type;
-        // using typename container_type::iterator;
         class iterator
         {
             private:
